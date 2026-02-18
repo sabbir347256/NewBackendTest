@@ -17,10 +17,7 @@ const upload = multer({
 bookRouter.post(
   '/createBook',
   upload.any(),
-  (req, res) => {
-    console.log(req.files); 
-    res.json({ ok: true });
-  }
+  createBook
 );
 
 export default bookRouter;
